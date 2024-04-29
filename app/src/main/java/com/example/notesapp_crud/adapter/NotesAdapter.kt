@@ -1,4 +1,4 @@
-package com.example.notesapp_crud
+package com.example.notesapp_crud.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -9,8 +9,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.notesapp_crud.Note
+import com.example.notesapp_crud.R
+import com.example.notesapp_crud.activity.UpdateNoteActivity
+import com.example.notesapp_crud.helper.NotesDatabaseHelper
 
-class NotesAdapter(private var notes: List<Note>,context: Context):RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
+class NotesAdapter(private var notes: List<Note>, context: Context):RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
 
     private val db: NotesDatabaseHelper = NotesDatabaseHelper(context)
 
@@ -32,7 +36,7 @@ class NotesAdapter(private var notes: List<Note>,context: Context):RecyclerView.
         holder.contentTextView.text = note.content
 
         holder.updateButton.setOnClickListener {
-            val intent = Intent(holder.itemView.context,UpdateNoteActivity::class.java).apply {
+            val intent = Intent(holder.itemView.context, UpdateNoteActivity::class.java).apply {
                 putExtra("note_id",note.id)
             }
             holder.itemView.context.startActivity(intent)

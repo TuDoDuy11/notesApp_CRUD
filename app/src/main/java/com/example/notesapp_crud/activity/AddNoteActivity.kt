@@ -1,13 +1,15 @@
-package com.example.notesapp_crud
+package com.example.notesapp_crud.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.notesapp_crud.Note
 import com.example.notesapp_crud.databinding.ActivityAddNoteBinding
+import com.example.notesapp_crud.helper.NotesDatabaseHelper
 
 class AddNoteActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddNoteBinding
-    private lateinit var db :NotesDatabaseHelper
+    private lateinit var db : NotesDatabaseHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddNoteBinding.inflate(layoutInflater)

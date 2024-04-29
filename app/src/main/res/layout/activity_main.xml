@@ -4,14 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:id="@+id/txtDangXuat"
+        android:text="Log out"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:textStyle="italic"
+        android:background="@drawable/logout_corner"
+        android:layout_marginEnd="16dp"
+android:layout_marginTop="10dp"
+        android:textColor="@color/green"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/notesHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:text="Note."
         android:layout_marginStart="18dp"
         android:textColor="@color/orange"
@@ -22,7 +36,7 @@
         android:id="@+id/notesRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         android:padding="16dp"/>
     
     <com.google.android.material.floatingactionbutton.FloatingActionButton

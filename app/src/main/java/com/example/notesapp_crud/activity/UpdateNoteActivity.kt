@@ -1,13 +1,15 @@
-package com.example.notesapp_crud
+package com.example.notesapp_crud.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.notesapp_crud.Note
 import com.example.notesapp_crud.databinding.ActivityUpdateNoteBinding
+import com.example.notesapp_crud.helper.NotesDatabaseHelper
 
 class UpdateNoteActivity : AppCompatActivity() {
     private lateinit var binding:ActivityUpdateNoteBinding
-    private lateinit var db:NotesDatabaseHelper
+    private lateinit var db: NotesDatabaseHelper
     private var noteId : Int = -1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
